@@ -1,0 +1,116 @@
+#LearnMode: True
+LearnMode: False
+
+LogResourceList:
+    #- 'file:///home/ubuntu/aminerfiles/AECID-WIN-Dataset_Benign.json.sort'
+    - 'file:///home/ubuntu/aminerfiles/AECID-WIN-Dataset_Payload.json.sort'
+
+Parser:
+  - id: event_id
+    type: VariableByteDataModelElement
+    name: 'event_id'
+    args: '0123456789'
+
+  - id: computer_name
+    type: AnyByteDataModelElement
+    name: 'computer_name'
+
+  - id: ts
+    type: DateTimeModelElement
+    name: 'timestamp'
+    date_format: "%Y-%m-%dT%H:%M:%S.%fZ" # 2024-03-21T20:46:06.955Z
+
+  - id: target_image
+    type: AnyByteDataModelElement
+    name: 'target_image'
+
+  - id: source_image
+    type: AnyByteDataModelElement
+    name: 'source_image'
+
+  - id: CommandLineLength
+    type: VariableByteDataModelElement
+    name: 'CommandLineLength'
+    args: '0123456789'
+
+  - id: CommandLine
+    type: AnyByteDataModelElement
+    name: CommandLine
+
+  - id: ip_address
+    #type: ipAddressDataModelElement
+    type: VariableByteDataModelElement
+    #type: AnyByteDataModelElement
+    name: 'ip_address'
+    args: '.0123456789'
+
+  - id: json
+    start: True
+    type: JsonModelElement
+    name: 'model'
+    allow_all_fields: True
+    optional_key_prefix: "*"
+    key_parser_dict:
+      "@timestamp": ts
+      winlog:
+        "*event_data":
+          "*TargetImage": target_image
+          "*SourceImage": source_image
+          "*CommandLineLength": CommandLineLength
+          "*CommandLine": CommandLine
+        event_id: event_id
+        computer_name: computer_name
+      "*ip_address": ip_address
+
+Input:
+  timestamp_paths: "/model/@timestamp/timestamp"
+  json_format: True
+
+Analysis:
+
+
+  - type: NewMatchPathDetector
+    id: NewMatchPathDetector
+    suppress: True
+
+  - type: NewMatchPathValueComboDetector
+    id: "name_event_combo"
+    persistence_id: "name_event_combo"
+    paths:
+      - "/model/winlog/computer_name/computer_name"
+      - "/model/winlog/event_id/event_id"
+
+  - type: NewMatchPathValueComboDetector
+    id: "source_target_combo"
+    persistence_id: "source_target_combo"
+    allow_missing_values: True
+    paths:
+      - "/model/winlog/event_data/*SourceImage/source_image"
+      - "/model/winlog/event_data/*TargetImage/target_image"
+
+  - type: NewMatchPathValueDetector
+    id: "CMD_Length_Detector"
+    persistence_id: "CMD_Length_Detector"
+    paths: ["/model/winlog/event_data/*CommandLineLength/CommandLineLength"]
+
+  - type: EntropyDetector
+    paths: ["/model/winlog/event_data/*CommandLine/CommandLine"]
+    prob_thresh: 0.15
+    default_freqs: False
+    output_logline: True
+
+  - type: NewMatchPathValueDetector
+    id: IP_Address_Detector
+    paths: ["/model/*ip_address/ip_address"]
+
+
+EventHandlers:
+  - id: "stpe"
+    type: "StreamPrinterEventHandler"
+    json: True
+
+  - id: 'stpefile'
+    type: 'StreamPrinterEventHandler'
+    json: true
+    pretty: false
+    output_file_path: '/tmp/anomalies.txt'
