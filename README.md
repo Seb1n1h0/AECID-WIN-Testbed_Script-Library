@@ -1,6 +1,6 @@
 # AECID-WIN-Testbed_Script-Library
 
-This repo contains scripts used for my project **AECID-WIN-Testbed**. <br>
+This repo contains scripts used for my project **AECID-WIN-Testbed**.
 
 ## AMiner
 
@@ -12,7 +12,8 @@ For more information, visit [Logdata-Anomaly-Miner](https://github.com/ait-aecid
 
 *AttackMate is a tool to automate cyber attack scenarios that supports scripting of attack techniques across all phases of the Cyber Kill Chain. AttackMate's design principles aim to integrate with penetration testing and attack emulation frameworks such as Metasploit and Sliver Framework and enables simple execution of commands via shell or ssh. For example, AttackMate enables to execute Metasploit modules or generate payloads and run commands in Metasploit sessions.*
 
-Glad to had the opportunity evaluating it's suitability for Windows scenarios! <br><br>
+Glad to had the opportunity evaluating it's suitability for Windows scenarios! 
+
 For more information, visit [Attackmate](https://github.com/ait-testbed/attackmate).
 
 ## Python
@@ -20,7 +21,7 @@ Manipulation of Windows Event Logs in JSON format for simplified parsing using A
 
 ## R
 
-[R](https://www.r-project.org/) was used to create customized plots. A sample if found [here](./R/rPlotAnom.png). The Python scripts were used to parse the logs for AMiner, the results from AMiner parsed into CSV files which ultimately were used to create the plot.
+[R](https://www.r-project.org/) was used to create customized plots. A sample is found [here](./R/rPlotAnom.png). The Python scripts were used to parse the logs for AMiner, the results from AMiner parsed into CSV files which ultimately were used to create the plot.
 
 ## Terraform
 Was used as baseline for the setup of a Windows environment running on [OpenStack](https://www.openstack.org/).
